@@ -1,0 +1,381 @@
+/*@Written by Jared Gilbón*/
+
+@mixin marginTop($amount) {
+    margin-top: $amount;
+    font-size: 2rem;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: .5rem;
+}
+
+@mixin after($width) {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: $width;
+    background-color: #EBA904;
+    height: 1px;
+}
+
+@mixin afterh4($width){
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: .5rem;
+    right: 0;
+    height: 1px;
+    background-color: #999;
+}
+
+@mixin divMobile {
+    width: 100%;
+    font-size: 3rem;
+    margin-top: .2rem;
+    margin-bottom: .5vw;
+    position: relative;
+    flex-direction: column;
+    padding-bottom: 1rem;
+    cursor: pointer;
+}
+
+@mixin divTab {
+    width: 75%;
+    font-size: 2vw;
+}
+
+@mixin pMobile {
+    margin-left: .2vw;
+    font-size: 2rem;
+    color: #666;
+    margin-top: 1rem;
+}
+
+@mixin pTab {
+    font-size: 1vw;
+}
+
+@mixin paragraphHeader {
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.body{
+    width: 100%;
+    padding-top: 6.5rem;
+    padding-bottom: 6.5rem;
+    flex-direction: column;
+
+    &__top{
+        width: 100%;
+        height: auto;
+    }
+
+    &__bottom{
+        padding-top: 6.5rem;
+        width: 100%;
+        height: auto;
+    }
+
+    &__row{
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+    }
+
+    &__col{
+        width: 100%;
+        height: inherit;
+        flex-direction: column;
+    }
+
+    &__desc--1{
+        width: 100%;
+        height: auto;
+    }
+
+    &__card--1{
+        padding: 2vw;
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+    }   
+    
+    &__card--2{
+        padding: 2vw;
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+    }  
+
+    &__card--3{
+        padding: 2vw;
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+    }  
+
+    &__card--3maxWidth{
+        padding: 2vw;
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+    } 
+
+    &__h1{
+        font-size: 7rem;
+    }
+
+    &__h2{
+        font-size: 4rem;
+        margin-top: 5rem;
+        margin-bottom: 2vw;
+    }
+
+    &__div--1{
+        @include divMobile();
+    }
+
+    &__div--2{
+        @include divMobile();
+    }
+
+    &__div--3{
+        @include divMobile();
+    }
+
+    &__div:focus{
+        height: auto;
+        overflow: visible;
+        background-color: red;
+    }
+
+    &__div--noafter{
+        width: 100%;
+        font-size: 3rem;
+        margin-top: .2rem;
+        margin-bottom: .5vw;
+        flex-direction: column;
+    }
+
+    &__div--1::after{
+        @include afterh4(0);
+    }
+
+    &__div--2::after{
+        @include afterh4(0);
+    }
+
+    &__div--3::after{
+        @include afterh4(0);
+    }
+
+    &__h5{
+        width: 100%;
+        font-size: 1.8rem;
+    }
+
+    &__h6{
+        margin-top: 3rem;
+        font-size: 2rem;
+        color: #888;
+    }
+
+    &__h4--1{
+        @include marginTop(3rem);
+    }
+
+    &__h4--2{
+        @include marginTop(5vw);
+    }
+
+    &__h4--1::after{
+        @include after(5rem);
+    }
+
+    &__h4--2::after{
+        @include after(4rem);
+    }
+
+    &__characterDesc--container{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    &__characterDesc--img{
+        width: 100%;
+        height: 40vw;
+        object-fit: contain;
+    }
+
+    &__characterDesc--body{
+        margin-top: 1rem;
+        width: 100%;
+        height: auto;
+        flex-flow: row wrap;
+    }
+
+    &__characterDesc{
+        margin-top: 2rem;
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+    }
+
+    &__img--tab{
+        display: none;
+    }
+
+    &__paragraphHeader--1{
+        @include paragraphHeader();
+    }
+
+    &__paragraphHeader--2{
+        @include paragraphHeader();
+    }
+
+    &__paragraphHeader--3{
+        @include paragraphHeader();
+    }
+
+    &__p--1{
+        @include pMobile();
+    }
+
+    &__p--2{
+        @include pMobile();
+    }
+
+    &__p--3{
+        @include pMobile();
+    }
+
+    &__dynamicImg{
+        height: 100%; 
+        width: 100%; 
+        object-fit: contain;
+    }
+
+    @media screen and (min-width: 850px) {
+        &__desc--1{
+            width: 50%;
+        }
+
+        &__img--tab{
+            display: flex;
+        }
+
+        &__img--mobile{
+            display: none;
+        }
+
+        &__col{
+            flex-direction: row;
+        }
+
+        &__card--1{
+            margin-top: 14vw;
+            width: 80%;
+            height: 30%;
+            padding-left: 15%;
+        }   
+        
+        &__card--2{
+            margin-top: 1vw;
+            width: 80%;
+            height: 70%;
+            padding-left: 1%;
+        }  
+
+        &__card--3{
+            padding: 0;
+        }
+
+        &__card--3maxWidth{
+            padding: 0;
+        }
+
+        &__h1{
+            font-size: 3.5vw;
+        }
+    
+        &__h2{
+            font-size: 1.5vw;
+            margin-top: 8vw;
+            margin-bottom: 2vw;
+        }
+
+        &__div--1{
+            @include divTab();
+        }
+    
+        &__div--2{
+            @include divTab();
+        }
+    
+        &__div--3{
+            @include divTab();
+        }
+
+        &__div--noafter{
+            width: 100%;
+            font-size: 2vw;
+        }
+
+        &__h5{
+            width: 100%;
+            font-size: 1vw;
+        }
+    
+        &__h6{
+            margin-top: 3rem;
+            font-size: 1vw;
+            color: #888;
+        }
+    
+        &__h4--1{
+            @include marginTop(3rem);
+        }
+    
+        &__h4--2{
+            @include marginTop(5vw);
+        }
+
+        &__p--1{
+            @include pTab();
+        }
+    
+        &__p--2{
+            @include pTab();
+        }
+    
+        &__p--3{
+            @include pTab();
+        }
+
+        &__characterDesc--img{
+            width: 70%;
+            height: 19vw;
+        }
+
+        &__characterDesc{
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__characterDesc--body{
+            margin-top: 0;
+            padding-left: 1vw;
+            height: 15vw;
+        }
+    
+    }
+}
+
+@media screen and (min-width: 850px) {
+    .body{
+        padding: 6.5rem;
+    }
+}

@@ -1,0 +1,22 @@
+/*@Written by Jared Gilbón*/
+
+@mixin flex {
+    display: flex;
+}
+
+@mixin center-justify {
+    justify-content: center;
+    align-items: center;
+}
+
+.hero{
+    width: 100%;
+    height: 15rem;
+    
+
+    &__ecko{
+        width: 18.5rem;
+        height: 7rem;
+    }
+
+}

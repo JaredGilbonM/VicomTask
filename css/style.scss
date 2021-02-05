@@ -1,0 +1,100 @@
+/*@Written by Jared Gilbón*/
+
+//var
+
+//var
+
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    //border: 1px solid #f00 !important;
+}
+
+html{
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+@font-face {
+	font-family: 'Museo Light';
+    src: url('../fonts/MuseoSans-300.ttf');
+}
+
+@font-face {
+	font-family: 'Museo Normal';
+    src: url('../fonts/MuseoSans-500.ttf');
+}
+
+@font-face {
+	font-family: 'Museo Black';
+    src: url('../fonts/MuseoSans-700.ttf');
+}
+
+.light-font{
+    font-family: 'Museo Light';
+}
+
+.normal-font{
+    font-family: 'Museo Normal';
+}
+
+.black-font{
+    font-family: 'Museo Black';
+}
+
+.flex{
+    display: flex;
+}
+
+.center-justify{
+    justify-content: center;
+    align-items: center;
+}
+
+.center-right{
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.top-justify{
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.top-right{
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.top-right{
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.top-justify-in-col{
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.spaced-around-left{
+    justify-content: center;
+    align-items: stretch;
+}
+
+.center{
+    align-items: center;
+}
+
+.bottom{
+    align-items: flex-end;
+}
+
+
+//import
+@import './components/header';
+@import './components/hero';
+@import './components/banner';
+@import './components/body';
+//import
+

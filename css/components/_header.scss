@@ -1,0 +1,99 @@
+/*@Written by Jared Gilbón*/
+
+@mixin flex {
+    display: flex;
+}
+
+@mixin center-justify {
+    justify-content: center;
+    align-items: center;
+}
+
+.header{
+    width: 100%;
+    height: 8rem;
+    
+    
+    &__promo{
+        width: 100%;
+        height: 4rem;
+        background: #EBA904;
+        text-align: center;
+        text-transform: uppercase;
+        color: #F2F2F2;
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    &__logo--mobile{
+        width: 16.5rem;
+        height: 2rem;
+    }
+
+    &__logo--tab{
+        width: 165px + (165/4);
+        height: 2.5rem;
+    }
+
+    &__nav--mobile{
+        width: 100%;
+        height: 5rem;
+        @include flex();
+        @include center-justify();
+        border-bottom: 1px solid #EAE8E8;
+    }
+
+    &__nav--tab{
+        margin: auto;
+        padding-left: 6.5rem;
+        padding-right: 6.5rem;
+        width: 100%;
+        height: 8rem;
+        display: none;
+        border-bottom: 1px solid #EAE8E8;
+    }
+
+    &__list{
+        width: 80rem;
+        list-style: none;
+        display: flex;
+        flex-flow: row;
+        justify-content: space-around;
+        opacity: 0;
+        transition: opacity .25s linear; 
+    }
+
+    &__link{
+        font-size: 1.4rem;
+    }
+
+    &__access{
+        width: 15rem;
+        height: 100%;
+        padding-left: 7.4rem;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    @media screen and (min-width: 1280px) {
+        &__nav--mobile{
+            display: none;
+        }
+
+        &__nav--tab{
+            @include flex();
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &__list{
+            opacity: 1;
+        }
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .header{
+        height: 11rem;
+    }
+}

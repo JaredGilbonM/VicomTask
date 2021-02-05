@@ -1,0 +1,30 @@
+/*@Written by Jared Gilbón*/
+
+.banner{
+    width: 100%;
+    height: auto;
+
+    &__imgContainer--mobile{
+        width: 100vw;
+        height: inherit;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__imgContainer--tab{
+        width: 100vw;
+        height: inherit;
+        display: none;
+    }
+
+    @media screen and (min-width: 850px) {
+        &__imgContainer--tab{
+            display: flex;
+        }
+
+        &__imgContainer--mobile{
+            display: none;
+        }
+    }
+
+}
